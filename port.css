@@ -1,0 +1,8 @@
+/* Since we're using Pico CSS, you might not need much here, but you can add custom styles. */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Add your styles here */
