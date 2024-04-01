@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Co2 Density values</title>
+</head>
+<body>
+  <h1>Co2 Density(mg/lt)</h1>
+  <ul id="data-list"></ul>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script>
+    axios.get('https://your-backend-api.com/data')
+      .then(response => {
+        const dataList = document.getElementById('data-list');
+        response.data.forEach(item => {
+          const li = document.createElement('li');
+          li.textContent = `${item.id}: ${item.name}`; // Adjust according to your table columns
+          dataList.appendChild(li);
+        });
+      })
+      .catch(error => {
+        console.error('Error fetching data:', error);
+      });
+  </script>
+</body>
+</html>
